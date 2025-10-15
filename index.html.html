@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SILVE — ежедневные прокладки с серебром</title>
+  <meta name="description" content="Ежедневные прокладки SILVE: антимикробный эффект Ag+, мягкость и уверенность. 1, 2 и 3 капли." />
+  <meta name="theme-color" content="#ffffff" />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0b0b0c; --muted:#63666a; --line:#ececec; --shadow:0 10px 30px rgba(0,0,0,.06);
+      --brand:#0b0b0c; --accent:#007aff; --radius-xl:28px; --radius:16px; --radius-sm:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:50px;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,Segoe UI,Roboto,Arial,sans-serif;}
+    img{max-width:100%;display:block}
+    a{color:var(--accent);text-decoration:none}
+    .container{width:min(1120px,92%);margin:0 auto}
+
+    /* Header */
+    header{position:sticky;top:0;background:rgba(255,255,255,.86);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line);z-index:30}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-img{height:128px; width:auto; display:block}
+    .logo-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(180deg,#fafafa,#f0f0f0);border:1px solid var(--line);box-shadow:inset 0 1px 0 #fff}
+    .menu{display:flex;gap:20px}
+    .menu a{color:var(--text);opacity:.6}
+    .menu a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--text);box-shadow:var(--shadow)}
+    .btn.primary{background:#000;color:#fff;border-color:#000}
+
+    /* Hero */
+    .hero{padding:70px 0 40px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:center}
+    h1{font-size:clamp(28px,4.2vw,52px);line-height:1.04;margin:8px 0 12px;letter-spacing:-.02em}
+    .lead{color:var(--muted);font-size:18px}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-xl);padding:26px;box-shadow:var(--shadow)}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .badge{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:12.5px;color:#3a3c40}
+    .mock{aspect-ratio:4/3;border-radius:var(--radius-xl);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);display:grid;place-items:center;overflow:hidden}
+
+    /* Products */
+    section{padding:64px 0}
+    h2{font-size:clamp(22px,3vw,32px);margin:0 0 10px}
+    .sub{color:var(--muted);margin:0 0 18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .p-item{display:flex;flex-direction:column;gap:12px}
+    .p-media{border-radius:18px;border:1px solid var(--line);overflow:hidden;background:#fafafa}
+    .p-title{font-weight:700}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12.5px;color:#3a3c40;background:#fff}
+
+    /* Cart */
+    .cart-bar{position:fixed;right:20px;bottom:20px;z-index:40}
+    .cart-btn{position:relative}
+    .cart-count{position:absolute;top:-6px;right:-6px;display:inline-grid;place-items:center;width:18px;height:18px;border-radius:999px;background:#000;color:#fff;font-size:11px}
+    .drawer{position:fixed;inset:auto 0 0 auto;width:min(420px,100%);background:#fff;border-left:1px solid var(--line);border-top:1px solid var(--line);box-shadow:var(--shadow);border-top-left-radius:18px;transform:translateY(110%);transition:.3s ease;z-index:50}
+    .drawer.open{transform:translateY(0)}
+    .drawer-header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+    .drawer-body{padding:14px 16px;max-height:60vh;overflow:auto}
+    .row{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px dashed var(--line);padding:10px 0}
+    .qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:10px}
+    .qty button{width:28px;height:28px;border:0;background:#fff}
+    .qty span{min-width:28px;text-align:center}
+    .drawer-footer{padding:14px 16px;border-top:1px solid var(--line);display:grid;gap:10px}
+
+    /* Proof / FAQ */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    details{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px;background:#fff}
+    summary{cursor:pointer;font-weight:600}
+
+    /* Footer */
+    footer{border-top:1px solid var(--line);color:var(--muted);padding:40px 0 70px}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo" aria-label="Логотип SILVE">
+  <img class="logo-img" src="images/logo-silver.svg" alt="SILVE logo" />
+</div><span>SILVE</span></div>
+    <nav class="menu" aria-label="Навигация">
+      <a href="#products">Продукт</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="#science">Технология</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="btn primary" id="openCart">Корзина</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <h1>Чистота. Комфорт. Защита в каждой капле.</h1>
+        <p class="lead">Ежедневные прокладки с биоактивным серебром Ag+ — мягкость, свежесть и деликатная забота о чувствительной коже. Три уровня впитываемости: 1, 2 и 3 капли.</p>
+        <div class="hero-badges">
+          <span class="badge">Антимикробный эффект Ag+</span>
+          <span class="badge">Контроль запаха</span>
+          <span class="badge">Дышащие материалы</span>
+          <span class="badge">Без отдушек</span>
+        </div>
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn primary" href="#products">Выбрать SILVE</a>
+          <a class="btn" href="https://www.instagram.com/silve.innovation" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="mock" aria-label="Фото продукта">
+        <div style="text-align:center;">
+          <div style="font-weight:700; font-size:22px; letter-spacing:.2px;">SILVE</div>
+          <div style="opacity:.55; margin-top:6px;">Место под общий визуал (герой)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <h2>Линейка SILVE</h2>
+      <p class="sub">Три уровня — под ваш день. Фото можно заменить на финальные: светлая (1 капля), серая (2 капли), тёмная (3 капли).</p>
+      <div class="grid-3">
+        <article class="card p-item" data-sku="SILVE-1">
+          <div class="p-media">
+            <!-- Замените src на ваш файл. Прим.: 1 капля - 4673773616004.png -->
+            <img src="images/1 kaplya.png" alt="1 kaplya" />
+          </div>
+          <div class="pill">1 капля · профилактика</div>
+          <div class="p-title">Ежедневная деликатная защита</div>
+          <p class="sub">Лёгкая свежесть и незаметность. 20 шт.</p>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="btn" onclick="addToCart('SILVE 1 капля', '1', 1)">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card p-item" data-sku="SILVE-2">
+          <div class="p-media">
+            <!-- Замените src на ваш файл. Прим.: 2 капли - 4673773616011.png -->
+            <img src="images/2 kaplya.png" alt="2 kaplya" />
+          </div>
+          <div class="pill">2 капли · баланс</div>
+          <div class="p-title">Больше уверенности на активный день</div>
+          <p class="sub">Комфорт и контроль запаха. 20 шт.</p>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="btn" onclick="addToCart('SILVE 2 капли', '2', 1)">В корзину</button>
+          </div>
+        </article>
+
+        <article class="card p-item" data-sku="SILVE-3">
+          <div class="p-media">
+            <!-- Замените src на ваш файл. Прим.: 3 капли - 4673773616028.png -->
+            <img src="images/3 kaplya.png" alt="1 kaplya" />
+          </div>
+          <div class="pill">3 капли · максимум</div>
+          <div class="p-title">Максимальная сухость и защита</div>
+          <p class="sub">Повышенная впитываемость. 20 шт.</p>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="btn" onclick="addToCart('SILVE 3 капли', '3', 1)">В корзину</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="container">
+      <h2>Почему это работает</h2>
+      <div class="grid-3">
+        <div class="card"><h3>Антимикробный эффект Ag+</h3><p class="sub">Поддерживает свежесть и снижает риск появления запаха.</p></div>
+        <div class="card"><h3>Деликатность для кожи</h3><p class="sub">Мягкие, дышащие материалы, без резких отдушек.</p></div>
+        <div class="card"><h3>Незаметность</h3><p class="sub">Тонкий профиль и удобная посадка — как будто ничего нет.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCIENCE / PROOF (по мотивам материалов SilverDays) -->
+  <section id="science">
+    <div class="container grid-2">
+      <div>
+        <h2>Технология и безопасность</h2>
+        <p class="sub">Серебро (Ag+) — известный антимикробный компонент. В сочетании с современными слоями обеспечивается комфорт, контроль запаха и деликатность для чувствительной кожи.</p>
+        <ul class="sub" style="margin-left:18px">
+          <li>Свежесть дольше, меньше риска неприятного запаха.</li>
+          <li>Бережный контакт с кожей, воздухопроницаемость.</li>
+          <li>Три уровня впитываемости — под разные сценарии дня.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Важно:</strong> информация носит ознакомительный характер и не заменяет консультацию специалиста.
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details>
+        <summary>В чём отличие от обычных ежедневок?</summary>
+        <p class="sub">Антимикробный компонент Ag+ помогает контролировать запах и поддерживает ощущение чистоты, при этом материалы деликатны для кожи.</p>
+      </details>
+      <details>
+        <summary>Как выбрать капли?</summary>
+        <p class="sub">1 капля — лёгкая ежедневная свежесть; 2 капли — баланс на активный день; 3 капли — максимум защиты и сухости.</p>
+      </details>
+      <details>
+        <summary>Подходит ли для чувствительной кожи?</summary>
+        <p class="sub">Да, но индивидуальные реакции возможны. При дискомфорте прекратите использование и обратитесь к специалисту.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;">
+    <div>© <span id="y"></span> SILVE. С заботой, команда Silve.</div>
+    <div style="display:flex;gap:12px">
+      <a href="#">Политика конфиденциальности</a>
+      <a href="#">Условия</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-header"><strong>Корзина</strong><button class="btn" id="closeCart">Закрыть</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-footer">
+    <div class="sub" id="cartTotal">Итого: 0</div>
+    <button class="btn primary" onclick="sendToWhatsApp()">Оформить в WhatsApp</button>
+    <small class="sub">Без онлайн-оплаты. Заявка уходит в WhatsApp на номер +996 501 830 085.</small>
+  </div>
+</div>
+
+<!-- Floating Cart Button -->
+<div class="cart-bar">
+  <button class="btn cart-btn" id="fabCart">Корзина <span class="cart-count" id="fabCount">0</span></button>
+</div>
+
+<script>
+  // --- Cart logic (localStorage) ---
+  const CART_KEY = 'silve_cart_v1';
+  const phone = '996501830085'; // WhatsApp без +
+
+  function getCart(){
+    try{ return JSON.parse(localStorage.getItem(CART_KEY))||[] }catch(e){ return [] }
+  }
+  function setCart(items){ localStorage.setItem(CART_KEY, JSON.stringify(items)); renderCart(); }
+  function addToCart(name, variant, qty=1){
+    const items = getCart();
+    const id = name+"-"+variant;
+    const idx = items.findIndex(i=>i.id===id);
+    if(idx>-1){ items[idx].qty += qty; } else { items.push({id,name,variant,qty}); }
+    setCart(items);
+  }
+  function changeQty(id, delta){
+    const items = getCart();
+    const idx = items.findIndex(i=>i.id===id);
+    if(idx>-1){ items[idx].qty = Math.max(1, items[idx].qty + delta); setCart(items); }
+  }
+  function removeItem(id){ setCart(getCart().filter(i=>i.id!==id)); }
+
+  function renderCart(){
+    const wrap = document.getElementById('cartItems');
+    const items = getCart();
+    const count = items.reduce((a,b)=>a+b.qty,0);
+    document.getElementById('fabCount').textContent = count;
+    if(!wrap) return;
+    wrap.innerHTML = items.length ? items.map(i=>`
+      <div class='row'>
+        <div>
+          <div style='font-weight:600'>${i.name}</div>
+          <div class='sub'>Вариант: ${i.variant}</div>
+        </div>
+        <div class='qty'>
+          <button onclick="changeQty('${i.id}',-1)">−</button>
+          <span>${i.qty}</span>
+          <button onclick="changeQty('${i.id}',1)">+</button>
+        </div>
+        <button class='btn' onclick="removeItem('${i.id}')">Удалить</button>
+      </div>
+    `).join('') : '<div class="sub">Корзина пуста</div>';
+    document.getElementById('cartTotal').textContent = 'Итого: ' + count + ' шт.';
+  }
+
+  function sendToWhatsApp(){
+    const items = getCart();
+    if(!items.length){ alert('Корзина пуста'); return; }
+    const lines = items.map(i=>`• ${i.name} — ${i.variant} капли × ${i.qty}`);
+    const msg = `Здравствуйте! Хочу оформить заказ SILVE:%0A${lines.join('%0A')}%0AИсточник: сайт`;
+    window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+  }
+
+  // Drawer controls
+  const drawer = document.getElementById('drawer');
+  function openDrawer(){ drawer.classList.add('open'); drawer.setAttribute('aria-hidden','false'); renderCart(); }
+  function closeDrawer(){ drawer.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); }
+  document.getElementById('openCart').addEventListener('click', openDrawer);
+  document.getElementById('fabCart').addEventListener('click', openDrawer);
+  document.getElementById('closeCart').addEventListener('click', closeDrawer);
+
+  // Footer year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // Initial render
+  renderCart();
+</script>
+</body>
+</html>
