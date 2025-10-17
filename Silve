@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SILVE — ежедневные гигиенические прокладки с настоящим серебром</title>
+  <meta name="description" content="SILVE — инновационные ежедневные прокладки с запатентованной технологией серебра. Естественная антибактериальная защита и комфорт каждый день." />
+
+  <!-- Apple-like system font stack -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <!-- Если будет логотип, положи файл в /assets/logo.svg и раскомментируй строку ниже -->
+      <!-- <img src="assets/logo.svg" alt="SILVE логотип" class="logo"> -->
+      <span class="wordmark">SILVE</span>
+    </div>
+    <nav class="top-cta">
+      <a class="btn ghost" href="#buy">Купить</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="glass card hero-card">
+        <h1>SILVE — ежедневные гигиенические прокладки с&nbsp;настоящим серебром</h1>
+        <p class="lede">
+          SILVE — инновационные ежедневные прокладки с запатентованной технологией серебра.
+          Частицы настоящего серебра вплавлены прямо в материал, а не наносятся снаружи. Это обеспечивает естественную
+          антибактериальную защиту, устраняет неприятный запах и помогает сохранять здоровье микрофлоры.
+        </p>
+        <div class="cta-row">
+          <a id="buy" class="btn primary" href="https://wa.me/996501830085?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20SILVE" target="_blank" rel="noopener">Купить в WhatsApp</a>
+          <a class="btn ghost" href="#details">Подробнее</a>
+        </div>
+        <p class="trust">
+          Мы — единственные в Кыргызстане, кто имеет официальный патент и лабораторное подтверждение технологии.
+          SILVE создаётся из сертифицированных европейских материалов и производится в Кыргызстане.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <!-- Замени пути на свои файлы -->
+        <figure class="shot">
+          <img src="assets/silve-beige.png" alt="SILVE — упаковка бежевого цвета" loading="lazy">
+        </figure>
+        <figure class="shot">
+          <img src="assets/silve-gray.png" alt="SILVE — упаковка серого цвета" loading="lazy">
+        </figure>
+        <figure class="shot">
+          <img src="assets/silve-black.png" alt="SILVE — упаковка чёрного цвета" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section id="details" class="features">
+      <div class="glass card">
+        <h2>Почему SILVE</h2>
+        <ul class="feature-list">
+          <li><span class="dot"></span>Естественная антибактериальная защита благодаря частицам серебра в материале</li>
+          <li><span class="dot"></span>Нейтрализация запаха и ощущение свежести в течение дня</li>
+          <li><span class="dot"></span>Сертифицированные европейские материалы</li>
+          <li><span class="dot"></span>Произведено в Кыргызстане</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn primary" href="https://wa.me/996501830085?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20SILVE" target="_blank" rel="noopener">Оформить в WhatsApp</a>
+          <a class="btn ghost" href="https://wa.me/996501830085?text=%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20%D0%BF%D0%BE%20SILVE" target="_blank" rel="noopener">Поддержка в WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> SILVE. Все права защищены.</p>
+    <a class="footer-whatsapp" href="https://wa.me/996501830085" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+      WhatsApp: +996 501 830 085
+    </a>
+  </footer>
+
+  <!-- Плавающая кнопка поддержки -->
+  <a class="fab-whatsapp" href="https://wa.me/996501830085?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BD%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20SILVE" target="_blank" rel="noopener" aria-label="Поддержка в WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path fill="#25D366" d="M20.52 3.48A11.94 11.94 0 0 0 12.01 0C5.39 0 .02 5.37.02 12c0 2.1.55 4.16 1.6 5.98L0 24l6.2-1.62A11.97 11.97 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 21.8a9.73 9.73 0 0 1-4.95-1.35l-.35-.2-3.67.96.98-3.58-.23-.37A9.8 9.8 0 1 1 12 21.8z"/>
+      <path fill="#25D366" d="M17.27 14.33c-.26-.13-1.53-.76-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.2-.55.07-.26-.13-1.08-.4-2.06-1.27-.76-.68-1.27-1.52-1.42-1.77-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.58-1.39-.79-1.9-.2-.49-.41-.42-.58-.43l-.5-.01c-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.17 0 1.28.93 2.52 1.06 2.69.13.17 1.83 2.8 4.43 3.83.62.27 1.11.42 1.49.54.63.2 1.21.17 1.66.1.51-.08 1.53-.62 1.75-1.22.21-.6.21-1.12.15-1.22-.06-.11-.24-.17-.5-.3z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+:root{
+  --bg-0: #f2f2f2;         /* светло-серый фон */
+  --bg-1: #e6e6e6;         /* градиентный слой */
+  --ink: #111;             /* почти чёрный текст, Apple vibe */
+  --muted: #6b7280;        /* вторичный текст */
+  --accent: #0a84ff;       /* сине-голубой, как у iOS */
+  --glass: rgba(255,255,255,0.6);
+  --radius: 20px;
+  --shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body{
+  margin:0;
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 800px at 20% 0%, var(--bg-1), var(--bg-0));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;}
+.skip-link:focus{ left:16px; top:16px; width:auto; height:auto; padding:.5rem .75rem; background:#fff; border-radius:8px; box-shadow: var(--shadow); }
+
+.site-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 24px clamp(20px, 3vw, 48px);
+}
+
+.brand{ display:flex; align-items:center; gap:12px; }
+.logo{ height:28px; }
+.wordmark{ letter-spacing:.24em; font-weight:600; font-size:14px; color:#000; text-transform:uppercase; opacity:.8; }
+
+.top-cta .btn{ padding:.55rem .9rem; }
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(24px, 4vw, 42px);
+  align-items:center;
+  padding: clamp(16px, 3vw, 32px) clamp(20px, 4vw, 56px) 24px;
+}
+
+.card{
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 3vw, 28px) clamp(18px, 3vw, 32px);
+}
+
+.glass{
+  background: var(--glass);
+  backdrop-filter: blur(12px) saturate(1.1);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);
+  border: 1px solid rgba(255,255,255,.55);
+}
+
+.hero-card h1{
+  margin: 4px 0 12px;
+  font-size: clamp(26px, 3.2vw, 40px);
+  letter-spacing: -0.02em;
+}
+
+.lede{ color: var(--muted); font-size: clamp(16px, 1.4vw, 18px); }
+
+.trust{ margin-top:18px; color:#374151; font-size: 14.5px; }
+
+.cta-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
+
+.btn{
+  --btn-bg: #fff;
+  --btn-fg: #111;
+  appearance:none; border:1px solid #e5e7eb;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  padding:.75rem 1.15rem; border-radius:14px;
+  text-decoration:none; font-weight:600;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
+.btn:hover{ transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+.btn:active{ transform: translateY(0); }
+
+.btn.primary{
+  --btn-bg: linear-gradient(#0a84ff, #0066ff);
+  --btn-fg: #fff;
+  border-color: transparent;
+}
+.btn.ghost{
+  --btn-bg: rgba(255,255,255,.7);
+  --btn-fg: #111;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.shot{
+  margin:0;
+  border-radius:16px;
+  overflow:hidden;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.shot img{ width:100%; height:auto; display:block; background:#fff; }
+
+.features{
+  padding: 12px clamp(20px, 4vw, 56px) 64px;
+}
+.features .card{ max-width: 960px; margin: 0 auto; }
+.features h2{ margin:0 0 10px; font-size: clamp(22px, 2.4vw, 28px); }
+.feature-list{
+  display:grid; gap:10px; margin:14px 0 0; padding:0; list-style:none;
+  color:#374151;
+}
+.feature-list li{ display:flex; gap:10px; align-items:flex-start; }
+.feature-list .dot{
+  width:10px; height:10px; border-radius:50%; background:#0a84ff33; border:2px solid #0a84ff66; margin-top:6px;
+}
+
+.site-footer{
+  padding: 28px clamp(20px, 3vw, 56px);
+  color:#4b5563; font-size:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;
+}
+.site-footer a{ color:inherit; text-decoration:none; }
+.site-footer a:hover{ text-decoration:underline; }
+
+.fab-whatsapp{
+  position: fixed; right: 18px; bottom: 20px;
+  width:56px; height:56px; border-radius:50%;
+  display:grid; place-items:center;
+  background:#ffffffd9; border:1px solid #e5e7eb;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+.fab-whatsapp:hover{ transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0,0,0,.1); }
+
+@media (max-width: 940px){
+  .hero{ grid-template-columns: 1fr; }
+}
+@media (prefers-color-scheme: dark){
+  :root{ --ink:#eaeaea; --muted:#bfc3c9; --glass: rgba(30,30,32,.45); }
+  body{ background: radial-gradient(1200px 800px at 20% 0%, #1f1f21, #111214); }
+  .btn.ghost{ --btn-bg: rgba(255,255,255,.12); --btn-fg:#fff; border-color: rgba(255,255,255,.2); }
+  .shot{ background:#1b1c1f; }
+  .site-footer{ color:#c7c9cf; }
+}
